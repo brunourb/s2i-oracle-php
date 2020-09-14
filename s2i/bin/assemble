@@ -11,7 +11,7 @@ rpm -ivh http://repositoriocentos.intra.goias.gov.br/oracle/oracle-instantclient
 echo "/usr/lib/oracle/18.5/client64/lib" > /etc/ld.so.conf.d/oracle.conf
 #https://pecl.php.net/package/oci8
 #oci8-2.0.12
-echo 'instantclient,/usr/lib/oracle/18.5/client64/lib' | pecl install ${OCI8_VERSION}
+echo 'instantclient,/usr/lib/oracle/18.5/client64/lib' | pecl install $OCI8_VERSION
 
 echo 'extension=oci8.so' >> /etc/opt/rh/rh-php$(echo $PHP_VERSION | tr -cd '[[:digit:]]')/php.d/10-oci8.ini
 
